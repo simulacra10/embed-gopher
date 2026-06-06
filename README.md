@@ -286,3 +286,9 @@ The font is [Share Tech Mono](https://fonts.google.com/specimen/Share+Tech+Mono)
 ## License
 
 [MIT](LICENSE)
+
+---
+
+## Open Source
+
+embed-gopher is free and open source software, sponsored by [DMX Digital](https://dmxdigital.site/).
