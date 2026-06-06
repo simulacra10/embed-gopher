@@ -2,6 +2,8 @@
 
 ![embed-gopher browser screenshot](screenshot.png)
 
+**[Live demo](https://www.yourgood.news/gopher/)**
+
 A single-file Gopher browser for the web. Drop `index.html` into any static site and your visitors get a retro terminal-style content reader — no build step, no dependencies, no server-side code.
 
 Content is written as plain text files and a simple menu format (gophermap). The browser fetches them over HTTP.
