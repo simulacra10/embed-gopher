@@ -1,0 +1,20 @@
+i  _____             _                          	fake	fake	0
+i / ____|           | |                         	fake	fake	0
+i| |  __  ___  _ __ | |__   ___ _ __            	fake	fake	0
+i| | |_ |/ _ \| '_ \| '_ \ / _ \ '__|           	fake	fake	0
+i| |__| | (_) | |_) | | | |  __/ |              	fake	fake	0
+i \_____|\___/| .__/|_| |_|\___|_|              	fake	fake	0
+i             | |                               	fake	fake	0
+i             |_|   Plain Text Edition          	fake	fake	0
+i	fake	fake	0
+i Welcome to the Gopher Browser demo. Use the links	fake	fake	0
+i below to explore. Navigate back with the Back button.	fake	fake	0
+i	fake	fake	0
+0About This Browser	/about.txt	fake	0
+0Getting Started	/welcome.txt	fake	0
+0Frequently Asked Questions	/faq.txt	fake	0
+i	fake	fake	0
+i ----------------------------------------	fake	fake	0
+i embed-gopher -- a single-file Gopher browser	fake	fake	0
+i https://github.com/simulacra10/embed-gopher	fake	fake	0
+.

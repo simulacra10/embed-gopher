@@ -1,0 +1,45 @@
+About This Browser
+==================
+
+embed-gopher is a single-file Gopher browser written in plain HTML,
+CSS, and vanilla JavaScript. Drop one <iframe> (or the whole file)
+into any web page and your visitors get a retro terminal-style content
+reader -- no build step, no dependencies, no server-side code.
+
+
+How It Works
+------------
+
+The browser fetches Gopher content from a static file host. It expects
+two kinds of files:
+
+  gophermap   A Gopher menu. Each line describes a link or a label.
+              The browser parses item types (0 = text, 1 = directory,
+              i = info) and renders them as styled, clickable entries.
+
+  *.txt       Plain text files displayed in a pre-formatted viewport
+              with URLs auto-linked.
+
+Fetches are plain HTTP GET requests -- no proxy, no WebSocket.
+Because Gopher itself runs over TCP, a thin HTTP wrapper (such as a
+static site generator or a simple file server) is all that is needed.
+
+
+Styling
+-------
+
+The interface uses a green-phosphor CRT aesthetic:
+
+  - Share Tech Mono (Google Fonts) for the typeface
+  - Scanline and vignette overlays via CSS pseudo-elements
+  - Amber address bar, dim info lines, bright link highlights
+
+All colors are CSS custom properties in :root, so the theme is easy
+to remap.
+
+
+License
+-------
+
+MIT. See LICENSE in the repository root.
+https://github.com/simulacra10/embed-gopher

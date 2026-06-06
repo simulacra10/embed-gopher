@@ -1,0 +1,63 @@
+Getting Started
+===============
+
+This page walks you through hosting your own content with embed-gopher.
+
+
+1. Serve Static Files
+---------------------
+
+embed-gopher fetches content over HTTP. Any static file host works:
+
+  - Hugo (with a /static/go4 directory)
+  - Nginx or Apache serving a folder
+  - GitHub Pages, Netlify, Cloudflare Pages
+  - Python: python3 -m http.server 8080
+
+Place your gophermap and .txt files wherever you like, then update
+BASE_URL in index.html to point at that location.
+
+
+2. Write a gophermap
+--------------------
+
+A gophermap is a plain text file with one entry per line. Each line
+starts with a single character item type:
+
+  i   Info line (displayed as dimmed text, not a link)
+  0   Text file link
+  1   Directory (submenu) link
+
+After the type character, fields are separated by TAB characters:
+
+  0Label text[TAB]selector[TAB]host[TAB]port
+
+For a static HTTP host, host and port are ignored by this browser.
+Set them to "fake" and "0" as placeholders.
+
+A single period on its own line ends the menu.
+
+
+3. Embed in a Page
+------------------
+
+The simplest embed is a full-page iframe:
+
+  <iframe src="index.html"
+          style="width:100%;height:100%;border:none;">
+  </iframe>
+
+Or link directly to index.html as a standalone page.
+
+
+4. Configure BASE_URL
+---------------------
+
+Near the top of the <script> block in index.html you will find:
+
+  var BASE_URL = isLocal
+    ? 'http://localhost:8080'
+    : 'https://example.com/gopher';
+
+Change both URLs to match your local dev server and production host.
+GOPHER_HOST controls the display string in the address bar.

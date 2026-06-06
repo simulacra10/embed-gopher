@@ -1,0 +1,54 @@
+Frequently Asked Questions
+==========================
+
+
+Q: Why Gopher?
+--------------
+
+Gopher (RFC 1436, 1993) predates the Web. It organizes content as
+menus of plain text and files -- no markup, no tracking, no JavaScript
+required on the content side. The format is trivial to write by hand
+and trivially fast to parse. It is a good fit for newsletters, notes,
+or any site that values readability over visual complexity.
+
+
+Q: Does this need a real Gopher server?
+----------------------------------------
+
+No. embed-gopher speaks HTTP, not the Gopher TCP protocol. Your
+content just needs to be reachable over HTTP as static files. A real
+gopherd is not required.
+
+
+Q: Can I add images or other media?
+------------------------------------
+
+The current renderer supports item types 0 (text) and 1 (directory).
+Image types (g = GIF, I = generic image) are defined in the Gopher
+spec but are not yet rendered in this browser. PRs welcome.
+
+
+Q: The font does not load offline.
+------------------------------------
+
+Share Tech Mono is loaded from Google Fonts. For fully offline use,
+self-host the font and update the @import URL in the <style> block,
+or replace it with any system monospace font (e.g. 'Courier New').
+
+
+Q: How do I add a subdirectory?
+--------------------------------
+
+Create a subdirectory, put a gophermap inside it, and link to it
+from the parent gophermap using a type-1 entry:
+
+  1My Subdir[TAB]/subdir/[TAB]fake[TAB]0
+
+The browser will fetch /subdir/gophermap when the link is clicked.
+
+
+Q: Where do I report bugs?
+---------------------------
+
+Open an issue on GitHub:
+https://github.com/simulacra10/embed-gopher/issues
